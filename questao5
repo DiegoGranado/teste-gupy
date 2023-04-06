@@ -1,0 +1,32 @@
+5) Escreva um programa que inverta os caracteres de um string.
+
+
+
+IMPORTANTE:
+
+a) Essa string pode ser informada através de qualquer entrada de sua preferência ou pode ser previamente definida no código;
+
+b) Evite usar funções prontas, como, por exemplo, reverse;
+
+
+--------------------------------------------------------------------------------------------
+
+# Definindo a string a ser invertida
+texto = "exemplo"
+
+# Convertendo a string em uma lista de caracteres
+lista_chars = list(texto)
+
+# Invertendo a lista de caracteres
+for i in range(len(lista_chars)//2):
+    temp = lista_chars[i]
+    lista_chars[i] = lista_chars[len(lista_chars)-1-i]
+    lista_chars[len(lista_chars)-1-i] = temp
+
+# Convertendo a lista de caracteres de volta para string
+texto_invertido = "".join(lista_chars)
+
+# Imprimindo a string invertida
+print(texto_invertido)
+
+O resultado será a string "olpmexe" que é a string "exemplo" invertida.
