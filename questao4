@@ -1,0 +1,32 @@
+4 - Dois veículos (um carro e um caminhão) saem respectivamente de cidades opostas pela mesma rodovia. O carro de Ribeirão Preto em direção a Franca, a uma velocidade constante de 110 km/h e o caminhão de Franca em direção a Ribeirão Preto a uma velocidade constante de 80 km/h. Quando eles se cruzarem na rodovia, qual estará mais próximo a cidade de Ribeirão Preto?
+
+
+
+IMPORTANTE:
+
+a) Considerar a distância de 100km entre a cidade de Ribeirão Preto <-> Franca.
+
+b) Considerar 2 pedágios como obstáculo e que o caminhão leva 5 minutos a mais para passar em cada um deles e o carro possui tag de pedágio (Sem Parar)
+
+c) Explique como chegou no resultado.
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+Considerando que os dois veículos saíram ao mesmo tempo e em direções opostas, eles irão se encontrar em algum ponto intermediário da rodovia. Como a distância entre as duas cidades é de 100 km, o ponto de encontro estará a uma distância de 50 km tanto de Ribeirão Preto quanto de Franca.
+precisamos calcular o tempo que cada um levou para chegar lá.
+O carro percorre a distância de 50 km em 50/110 horas = 0,4545 horas, ou aproximadamente 27 minutos.
+O caminhão, por sua vez, leva um tempo maior devido aos pedágios, que atrasam a sua viagem em um total de 10 minutos (5 minutos em cada um). 
+Portanto, ele percorre a distância de 50 km em (50/80) + (10/60) horas = 0,6875 horas, ou aproximadamente 41 minutos.
+o carro estará mais próximo da cidade de Ribeirão Preto quando os dois veículos se encontrarem na rodovia.
+
+distancia = 100
+velocidade_carro = 110
+velocidade_caminhao = 80
+tempo_carro = distancia / velocidade_carro
+tempo_caminhao = (distancia / velocidade_caminhao) + (10/60)
+if tempo_carro < tempo_caminhao:
+    print("O carro está mais próximo de Ribeirão Preto.")
+else:
+    print("O caminhão está mais próximo de Ribeirão Preto.")
